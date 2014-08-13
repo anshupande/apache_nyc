@@ -4,7 +4,7 @@
   <p>
   My name is <%= node["hostname"] %>.
   Current User is <%= node["current_user"] %>.
-  Total Memory is <%= node["memory"] %>
+  Total Memory is <%= node["memory"] ["total"] %>
   </p>
 </body>
 </html>
