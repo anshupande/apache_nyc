@@ -11,9 +11,10 @@ package "httpd" do
 end
 
 service "httpd" do
-	#supports :status => true, :restart => true, :reload => true
 	action [ :start, :enable ]
 end
+
+#document_root = node["apache"]["document_root"]
 
 template "/var/www/html/index.html" do
 	source "index.html.erb"

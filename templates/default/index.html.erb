@@ -1,10 +1,10 @@
 <html>
 <body>
-  <h1> Hello, Nathen. This is Anshu!</h1>
+  <h1> Hello, Nathen. This is Anshu from <%= node["apache"]["greeting"] %>! </h1>
   <p>
   My name is <%= node["hostname"] %>.
   Current User is <%= node["current_user"] %>.
-  Total Memory is <%= node["memory"] ["total"] %>
+  Total Memory is <%= node["memory"] ["total"].to_i*1024 %> bytes of RAM
   </p>
 </body>
 </html>
